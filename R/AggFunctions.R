@@ -221,7 +221,7 @@ sendQuery <- function(utd_api_key = NULL, table_name = "", query = list(), citat
   }
   query_string = rjson::toJSON(query)
   query_string = gsub("\\", '', query_string, fixed=TRUE)
-  url <- 'http://149.165.156.33:5002/api/data?api_key='
+  url <- 'https://eventdata.utdallas.edu/api/data?api_key='
   url_submit = ''
   table_name = tolower(table_name)
   if (table_name=="phoenix_rt" ) {
