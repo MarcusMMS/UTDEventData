@@ -93,7 +93,7 @@ tableVar <-function(table='', utd_api_key=NULL, lword='')
   if (tb=='terrier'){
 
   url = 'https://eventdata.utdallas.edu'
-  url_submit = paste(url_submit,url, "?api_key=",utd_api_key, '&query=', query_string, sep='','&datasource=',table_name)
+  url_submit = paste(url,tb,'&api_key=',utd_api_key,sep='')
   # getting variables names
   VarList <- readLines(url_submit, warn=FALSE)
   List<-gsub(".*\\[(.*)\\].*", "\\1", VarList)
