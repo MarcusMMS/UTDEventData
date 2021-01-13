@@ -53,10 +53,10 @@ This package requires you to have an API key to access to the UTD data server. P
 You can install the package from the UTDEventData GitHub page in R with the following syntax.
 ```{r, eval = FALSE}
 # install the package without the vignette
-devtools::install_github("KateHyoung/UTDEventData")
+devtools::install_github("MarcusMMS/UTDEventData")
 
 # install the package with the vignette
-devtools::install_github("KateHyoung/UTDEventData", build_vignettes=TRUE)
+devtools::install_github("MarcusMMS/UTDEventData", build_vignettes=TRUE)
 ```
 
 To cite the package, an execution function `citation()` can be used, and users can find the citation texts when using the data obtaining functions, `pullData()` and `sendQuery()` with a default option of `citation = TRUE`. Moreover, the function of `citeData()` in the package will print data citation texts in a R console. 
