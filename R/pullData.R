@@ -112,7 +112,7 @@ pullData<-function(utd_api_key=NULL, table_name=" ", country=list(), start=" ", 
     url_submit = paste(url_submit,url, utd_api_key, '&query=', query_string, sep='','&datasource=',table_name)
     url_submit = gsub('"',"%22",url_submit, fixed=TRUE)
     url_submit = gsub(' ',"%20",url_submit, fixed=TRUE)
-    url_submit
+    url_submit = 'https://eventdata.utdallas.edu/api/data?api_key='
     retrieved_data <- readLines(curl::curl(url_submit), warn=FALSE)
     closeAllConnections()
     parsed_data <- jsonlite::fromJSON(retrieved_data)$data
