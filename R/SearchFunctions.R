@@ -37,7 +37,7 @@ DataTables<-function (utd_api_key=NULL)
   if (is.null(utd_api_key)) print("No API key set. Instructions on how to set the API key are available in the documentation.")
 
   # constructing a url
-  url <- 'https://eventdata.utdallas.edu/api/data?api_key=' 
+  url <- 'https://eventdata.utdallas.edu/api/datasources?api_key=
   url_submit = paste(url,utd_api_key,sep='')
   # getting table names
   TableList <- readLines(url_submit, warn=FALSE)
