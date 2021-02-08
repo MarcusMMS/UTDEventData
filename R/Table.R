@@ -68,7 +68,7 @@ Table <- setRefClass("Table",
                          # Convert the data structure into a string
                          # The gsub removes the backslashes, but they get visually re-added when printing to console
                          query_string = gsub("\\", '', rjson::toJSON(query), fixed=TRUE)
-                         url <- 'https://eventdata.utdallas.edu/api/TEST/data?api_key='
+                         url <- 'https://eventdata.utdallas.edu/api/data?api_key='
                          url_submit = ''
                          table_name = tolower(table_name)
                          if (table_name=="phoenix_rt" ) {
